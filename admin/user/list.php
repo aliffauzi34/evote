@@ -30,12 +30,12 @@ if(!isset($_SESSION['id_admin'])) {
 
                   if (isset($_GET['hlm'])) {
                               $hlm = $_GET['hlm'];
-                              $no  = (5*$hlm) - 4;
+                              $no  = (36*$hlm) - 35;
                         } else {
                               $hlm = 1;
                               $no  = 1;
                         }
-                  $start  = ($hlm - 1) * 5;
+                  $start  = ($hlm - 1) * 36;
 
                   $sql = mysqli_query($con, "SELECT * FROM t_user JOIN t_kelas ON t_user.id_kelas = t_kelas.id_kelas LIMIT $start,36");
 
