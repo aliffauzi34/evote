@@ -64,13 +64,15 @@ if(!isset($_SESSION['id_admin'])) {
                               ?>
                         </td>
                         <td style="text-align: center;vertical-align: middle;">
-                          <?php 
-                          $ts = mysqli_query($con, "SELECT * FROM t_pemilih where nis");
-                          if (empty($ts) ) {
-                             echo "Sudah Memilih";
-                          } else {
-                           echo "Belum Memilih";
-                          }
+                           <?php
+                           //var_dump($data['status']);
+                           if ($data['status'] == "1") {
+                              echo "Sudah Memilih";
+                           }
+                              else{
+                                 echo "Belum Memilih";
+                              }
+                           
                            ?>
                         </td>
                         <td style="text-align:center;vertical-align:middle;">
