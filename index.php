@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
       $sql->store_result();
 
       if ($sql->num_rows() > 0 ) {
-         $sql->bind_result($id, $user, $kelas, $jk, $pemilih);
+         $sql->bind_result($id, $user, $kelas, $jk, $pemilih,$status);
          $sql->fetch();
 
          $_SESSION['siswa'] = $id;
